@@ -310,7 +310,7 @@ print("Inventory data check:")
 inspect_data(df)
 ```
 
- `netflix1.csv` in the current working directory and uncomment/run these lines. A CSV is a comma-separated values file; `read_csv()` loads it into a DataFrame.
+ `netflix1.csv` in the current working directory and uncomment/run these lines. netflix_titles_cleaned.csv A CSV is a comma-separated values file; `read_csv()` loads it into a DataFrame.
 
 ```python
 netflix = pd.read_csv("netflix1.csv")
