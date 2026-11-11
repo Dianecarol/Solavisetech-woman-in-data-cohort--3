@@ -1,6 +1,7 @@
 Data Structures, Functions & First Look at Data
 
 Author: Caroline Diana Njama 
+
 Program: SolaviseTech Women in Data, Cohort 3
 
 Welcome! This beginner-friendly lesson introduces Python dictionaries and functions, then uses NumPy and pandas to explore simple inventory and sales data. Work through each section in order, running the code cells as you go.
