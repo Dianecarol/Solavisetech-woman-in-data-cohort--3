@@ -312,7 +312,42 @@ inspect_data(df)
 
 Bonus: inspect a real dataset
 
+Bonus + Netflix Cleaned Dataset
 
+```python
+def inspect_data(dataframe):
+    print("Rows:", dataframe.shape[0])
+    print("Columns:", dataframe.shape[1])
+    print("\nMissing values per column:")
+    print(dataframe.isnull().sum())
+    print("\nDuplicate rows:", dataframe.duplicated().sum())
+
+inspect_data(df)
+
+Use cleaned file
+netflix = pd.read_csv("netflix_titles_cleaned.csv")
+inspect_data(netflix)
+print("\nFirst 5 rows:")
+print(netflix.head())
+
+Check placeholders
+print("\n'Not Given' entries:")
+print("'director':", netflix["director"].eq("Not Given").sum())
+print("'country':", netflix["country"].eq("Not Given").sum())
+```
+
+Summary:
+- Inventory: 11 rows, 1 missing, 1 duplicate
+- Netflix cleaned: 8790 rows, 10 columns, 0 missing (pandas), 0 duplicates. Hidden gaps are "Not Given" in director (2588) and country (287) - cleaned version handles these.
+```
+
+
+
+Done! This version now uses `netflix_titles_cleaned.csv`.
+
+After that, upload the csv too: **Add file > Upload files >** choose `netflix_titles_cleaned.csv` > Commit.
+
+Tell me when you see the pencil icon?
 
 ```python
 netflix = pd.read_csv("netflix_titles_cleaned.csv")
