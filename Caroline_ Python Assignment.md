@@ -130,6 +130,4 @@ inspect_data(netflix)
  Summary
 - Inventory: 11 rows, 1 missing value (`Highlighter Set`), and 1 duplicate row (`Pen`).
 - Netflix cleaned: 8,790 rows, 10 columns, 0 missing values, and 0 duplicates (contains hidden `"Not Given"` placeholders).
-Use code with caution.
-Would you like me to also include the printed outputs under each code block, or do your assignment guidelines prefer only the raw Python code?
-Show Code
+
