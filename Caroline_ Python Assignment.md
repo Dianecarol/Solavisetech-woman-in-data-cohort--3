@@ -1,35 +1,23 @@
-Your Python logic and math calculations are completely accurate, though you should wrap your code in Markdown code blocks and remove the leftover copy-paste instructions before committing assignment.md to GitHub.
-Without proper Markdown syntax, GitHub will render your Python code as plain paragraphs instead of formatted code.
 
-Corrections & Improvements Needed
+ Data Structures, Functions & First Look at Data
+ 
+Author: Caroline Diana Njama 
 
-• Remove chat instructions. Delete the top lines (Here is assignment.md... and No special symbols...) and the bottom section (HOW TO PASTE ON ANDROID...) so they do not appear in your final assignment file.
-• Add Markdown headings. Use # and ## before your section titles so GitHub displays clear, bold headers.
-• Wrap code in backticks. Enclose every Python snippet inside triple backticks (```python) so GitHub applies syntax highlighting and preserves your indentation.
-• Format notes as comments or text. Lines like Median 252.5 vs Mean 310.71... sit right under Python code without a # symbol. Placing them outside the code block keeps your code runnable without syntax errors.
-• Check your section reference. In Section 2, your note mentions Handled in section 5.3, but your document only has a main 5. pandas section without sub-numbering. Change this to Handled in section 5 for consistency.
-
-Ready-to-Use Version for assignment.md
-
-You can copy and paste this cleaned Markdown version directly into your GitHub editor:
-markdown
-# Data Structures, Functions & First Look at Data
-**Author:** Caroline Diana Njama  
-**Program:** SolaviseTech Women in Data, Cohort 3  
+Program: SolaviseTech Women in Data, Cohort 3  
 
 My learning journey and goals in the SolaviseTech Women in Data Cohort 3 program. SolaviseTech is a program that helps women master Data Science & ML, Data Analysis, and Artificial Intelligence. At the end of this program, I wish to be an expert in these three domains and have multiple opportunities.
 
-## Welcome
+ Welcome
 This beginner-friendly lesson introduces Python dictionaries and functions, then uses NumPy and pandas to explore simple inventory and sales data.
 
-### Learning Objectives
+ Learning Objectives
 - Create, access, update, and loop through dictionaries
 - Write functions that accept inputs and return results
 - Use NumPy arrays to calculate basic statistics and reshape data
 - Create and inspect a pandas DataFrame
 - Identify missing values and duplicate rows
 
-## 1. Setup
+ 1. Setup
 ```python
 import numpy as np
 import pandas as pd
@@ -52,7 +40,7 @@ prices = {"Notebook": 1500, "Pen": 200, "Backpack": 12000, "Water Bottle": 2500}
 daily_sales = np.array([220, 250, 240, 230, 260, 300, 310, 235, 245, 255, 240, 265, 980, 320])
 ```
 
-## 2. Dictionaries
+ 2. Dictionaries
 ```python
 product = {"product": "Notebook", "category": "Stationery", "price": 1500, "quantity": 20}
 print("Price:", product["price"])
@@ -70,9 +58,9 @@ for item in inventory:
     category_counts[category] = category_counts.get(category, 0) + 1
 print("Products per category:", category_counts)
 ```
-> **Note:** Stationery shows 4 because the duplicate Pen is counted twice. This is handled in Section 5.
+Note: Stationery shows 4 because the duplicate Pen is counted twice. This is handled in Section 5.
 
-## 3. Functions
+ 3. Functions
 ```python
 def total_value(price, quantity):
     if quantity is None:
@@ -103,7 +91,7 @@ def products_in_category(inventory_list, category):
     return names
 ```
 
-## 4. NumPy
+ 4. NumPy
 ```python
 print("Shape:", daily_sales.shape)
 print("Total:", np.sum(daily_sales))
@@ -114,9 +102,9 @@ weekly_sales = daily_sales.reshape(2, 7)
 print("Weekly sales:\n", weekly_sales)
 print("Median:", float(np.median(daily_sales)))
 ```
-> **Observation:** Median is 252.5 vs. Mean 310.71 because the outlier (980) pulls the mean up. Total sales equal 4350.
+Observation: Median is 252.5 vs. Mean 310.71 because the outlier (980) pulls the mean up. Total sales equal 4350.
 
-## 5. pandas
+ 5. pandas
 ```python
 df = pd.DataFrame(inventory)
 print(df.head())
@@ -139,9 +127,9 @@ netflix = pd.read_csv("netflix_titles_cleaned.csv")
 inspect_data(netflix)
 ```
 
-## Summary
-- **Inventory:** 11 rows, 1 missing value (`Highlighter Set`), and 1 duplicate row (`Pen`).
-- **Netflix cleaned:** 8,790 rows, 10 columns, 0 missing values, and 0 duplicates (contains hidden `"Not Given"` placeholders).
+ Summary
+- Inventory: 11 rows, 1 missing value (`Highlighter Set`), and 1 duplicate row (`Pen`).
+- Netflix cleaned: 8,790 rows, 10 columns, 0 missing values, and 0 duplicates (contains hidden `"Not Given"` placeholders).
 Use code with caution.
 Would you like me to also include the printed outputs under each code block, or do your assignment guidelines prefer only the raw Python code?
 Show Code
